@@ -72,7 +72,7 @@ export class AppComponent implements AfterViewInit {
     this.modal.nativeElement.style.display = "none";
   }
 
-  constructor(private notiService: NotificationService,
+  constructor(public notiService: NotificationService,
     private imageService: ImageService) { }
 }
 
