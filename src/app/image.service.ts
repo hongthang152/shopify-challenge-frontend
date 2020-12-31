@@ -13,7 +13,7 @@ export class ImageService {
   constructor(private http: HttpClient, private notiService: NotificationService) { }
 
   upload(formData: FormData): Observable<any> {
-    return this.http.post(`${environment.backend_host}/images`, formData).pipe(
+    return this.http.post(`${environment.backend_host}/api/images`, formData).pipe(
       tap(() => this.notiService.success("Images have been uploaded")),
       catchError((err: HttpErrorResponse) => {
         this.notiService.error(err.message);
@@ -24,7 +24,7 @@ export class ImageService {
   get(search? : string): Observable<string[]> {
     let params = new HttpParams();
     if(search != null || search != "") params = params.set("search", search);
-    return this.http.get<string[]>(`${environment.backend_host}/images`, { params: params }).pipe(
+    return this.http.get<string[]>(`${environment.backend_host}/api/images`, { params: params }).pipe(
       catchError((err: HttpErrorResponse) => {
         this.notiService.error(err.message);
         return throwError(err);
