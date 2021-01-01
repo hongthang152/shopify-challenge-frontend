@@ -29,7 +29,7 @@ export class NotificationService {
     return this.subject.asObservable();
   }
 
-  close(timeout = 5000) {
+  close(timeout = 10000) {
     setTimeout(() => {
      this.subject.next(new Alert(null, AlertType.Close))
     }, timeout);

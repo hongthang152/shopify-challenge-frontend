@@ -35,7 +35,7 @@
         <input type="text" placeholder="Search by image name..." (input)="search($event.target.value)">
         <i class="search icon"></i>
       </div>
-    <button class="positive ui button add-image-btn" (click)="showImageUploadInput()"><i class="plus square outline icon"></i>New image</button>
+    <button class="positive ui button add-image-btn" (click)="showImageUploadInput()"><i class="plus square outline icon"></i>New images</button>
       <input class="hidden" type="file" accept="image/*" #file_input multiple (change)="upload($event.target.files)" />
     </div>
   </div>
