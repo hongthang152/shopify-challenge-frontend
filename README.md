@@ -25,7 +25,7 @@ npm install
 node_modules/@angular/cli/bin/ng serve
 ```
 
-3. Open [localhost:4200](localhost:4200) and you should be able to see our application running
+3. Open [localhost:4200](http://localhost:4200/) and you should be able to see our application running
 
 
 ## Contributing
