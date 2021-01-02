@@ -25,13 +25,6 @@ export class AppComponent implements AfterViewInit {
   )
 
   ngOnInit() {
-    // .subscribe(
-    //   (alert: Alert) => {
-    //     console.log(alert);
-    //   }
-    // )  
-    // this.alertObservable$.subscribe((alert: any) => console.log(alert));
-    
   }
 
   ngAfterViewInit() {
@@ -52,8 +45,8 @@ export class AppComponent implements AfterViewInit {
 
     for(var i = 0; i < files.length; i++) {
       var file = files.item(i);
-      if(file.size > 2e6) {
-        this.notiService.error("Only image that is less than 2 MB in file size can be uploaded");
+      if(file.size >= 5e6) {
+        this.notiService.error("Only image that is less than 5 MB in file size can be uploaded");
         return;
       }
       formData.append('photos', file);

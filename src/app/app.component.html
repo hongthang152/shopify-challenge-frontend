@@ -9,14 +9,14 @@
         <p>{{ alert.msg }}</p>
       </div>
       <div *ngSwitchCase="AlertType.Error" class="ui negative message">
-        <i class="close icon"></i>
+        <i class="close icon" (click)="notiService.close(0)"></i>
         <div class="header">
           Error
         </div>
         <p>{{ alert.msg }}</p>
       </div>
       <div *ngSwitchCase="AlertType.Info" class="ui warning message">
-        <i class="close icon"></i>
+        <i class="close icon" (click)="notiService.close(0)"></i>
         <div class="header">
           Alert
         </div>
